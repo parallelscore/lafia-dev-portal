@@ -3,28 +3,59 @@ import { Form, Button, Col } from 'react-bootstrap';
 import './loginForm.scss';
 import logo from './../../images/lafia_logo 1.svg';
 import { Link } from 'react-router-dom';
-const Login = () => {
+
+interface IForm {
+  handleChange: (e: any) => void;
+  handleSubmit: (e: any) => void;
+  username: string;
+  password: string;
+  userLabel: string;
+  passwordLabel: string;
+  loading: boolean;
+}
+
+const LoginForm = ({
+  passwordLabel,
+  userLabel,
+  handleChange,
+  handleSubmit,
+  username,
+  password,
+  loading,
+}: IForm) => {
   return (
     <div>
       <Col className="form_wrapper">
         <div className="form_wrapper__content">
           <img className="logo_img" src={logo} alt="my logo" />
           <h3 className="heading-text">Dev Portal</h3>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group
               className="margin-form-divider"
               controlId="formBasicEmail"
             >
-              <Form.Label>Username</Form.Label>
-              <Form.Control type="text" placeholder="Enter email" />
+              <Form.Label>{userLabel}</Form.Label>
+              <Form.Control
+                value={username}
+                onChange={handleChange}
+                name="username"
+                type="text"
+                placeholder="Enter email"
+              />
             </Form.Group>
 
             <Form.Group
               className="margin-form-divider"
               controlId="formBasicPassword"
             >
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="8 + characters" />
+              <Form.Label>{passwordLabel}</Form.Label>
+              <Form.Control
+                value={password}
+                onChange={handleChange}
+                name="password"
+                type="password"
+                placeholder="8 + characters"
+              />
             </Form.Group>
 
             <Button className="myLogin-btn margin-form-divider" type="submit">
@@ -59,4 +90,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginForm;

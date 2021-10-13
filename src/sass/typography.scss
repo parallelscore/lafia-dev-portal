@@ -1,6 +1,10 @@
 .h3-login {
   font-size: 18px;
   font-weight: 700;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .login-links {
