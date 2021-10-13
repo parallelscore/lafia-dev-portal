@@ -1,0 +1,8 @@
+<svg width="712" height="900" viewBox="0 0 712 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style="mix-blend-mode:multiply">
+<path d="M0 20C0 8.9543 8.95431 0 20 0H178V900H20C8.9543 900 0 891.046 0 880V20Z" fill="#6B48FF"/>
+<rect x="178" width="178" height="900" fill="#74AAF3"/>
+<rect x="356" width="178" height="900" fill="#F2D9F2"/>
+<rect x="534" width="178" height="900" fill="#6B48FF" fill-opacity="0.05"/>
+</g>
+</svg>

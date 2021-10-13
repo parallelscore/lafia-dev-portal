@@ -1,0 +1,62 @@
+.form_wrapper {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.form-control {
+  width: 30vw;
+  padding: 0.75rem;
+}
+
+.margin-form-divider {
+  margin: 3vh !important;
+}
+
+.myLogin {
+  width: 30vw;
+  background: #6b48ff;
+  color: #fff;
+  padding: 0.75rem;
+  font-size: 18px;
+  font-weight: 700;
+
+  &:hover {
+    color: #6b48ff;
+    background: #fff;
+    border: 2px solid #6b48ff;
+  }
+}
+
+.logo_img {
+  justify-self: center;
+  align-self: center;
+  margin: 2.8vh 0;
+}
+
+.heading-text {
+  justify-self: center;
+  align-self: center;
+  margin: 2.8vh 0;
+  color: #0d3f67;
+  font-weight: 700;
+}
+
+.forgot-text {
+  justify-self: center;
+  align-self: center;
+  font-size: 15px;
+  color: #6b48ff;
+}
+
+.form-label {
+  color: #0d3f67 !important;
+}
