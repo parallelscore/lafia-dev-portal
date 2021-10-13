@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import React from 'react';
+// import logo from './logo.svg';
+// import './App.css';
+// import { useTranslation } from 'react-i18next';
 
-function App() {
+// function App() {
+//   const { Trans } = useTranslation();
+//   return (
+//     <div className="App">
+//       <div>{t('simpleContent')}</div>
+//       <Trans i18nKey="userMessagesUnread" count={count}>
+//         Hello <strong title={t('nameTitle')}>{{ name }}</strong>, you have{' '}
+//         {{ count }} unread message. <Link to="/msgs">Go to messages</Link>.
+//       </Trans>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React from 'react';
+import { Translation } from 'react-i18next';
+
+export default function App() {
+  // const langChange = () => {
+  //   return i18n.changeLanguage('en-US')
+  // }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Translation>
+        {(t, { i18n }) => <p>{t('my translated text')}</p>}
+      </Translation>
+
+      <button></button>
+    </>
   );
 }
-
-export default App;
