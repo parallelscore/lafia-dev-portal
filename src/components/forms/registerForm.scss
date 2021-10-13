@@ -1,0 +1,109 @@
+@use './../../sass/typography.scss';
+
+.form_wrapper {
+  padding: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-secondary {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form-control {
+  width: 30vw;
+  padding: 0.75rem;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.margin-form-divider {
+  margin: 1.75vh;
+}
+
+.myLogin-btn {
+  width: 30vw;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem;
+
+  @extend .h3-login;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+    background: #f0ecff;
+    border: 2px solid #6b48ff;
+  }
+}
+
+.myLogin-secondary {
+  width: 7vw;
+  padding: 0.7rem 0.5rem;
+  background: #f0ecff;
+  color: var(--color-primary);
+  border: none;
+  align-self: center;
+  @media screen and (max-width: 768px) {
+    width: 50%;
+  }
+
+  &:hover {
+    background: var(--color-primary);
+    color: #f0ecff;
+  }
+}
+
+.logo_img {
+  justify-self: center;
+  align-self: center;
+  margin: 1.4vh 0;
+}
+
+.heading-text {
+  justify-self: center;
+  align-self: center;
+  margin: 0.3vh 0;
+  color: #0d3f67;
+  font-weight: 700;
+}
+
+.forgot-text {
+  justify-self: center;
+  align-self: center;
+  font-size: 15px;
+  color: #0d3f67;
+  margin: 3vh 0;
+  font-weight: 700;
+}
+
+.form-label {
+  color: #0d3f67 !important;
+}
+
+.what-is {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myLinks {
+  @extend .login-links;
+}
+
+.mTop {
+  margin-top: 0.3rem;
+}

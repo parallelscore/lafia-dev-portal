@@ -3,6 +3,7 @@ import { Form, Button, Col } from 'react-bootstrap';
 import './loginForm.scss';
 import logo from './../../images/lafia_logo 1.svg';
 import { Link } from 'react-router-dom';
+import { History } from 'history';
 
 interface IForm {
   handleChange: (e: any) => void;
@@ -12,6 +13,7 @@ interface IForm {
   userLabel: string;
   passwordLabel: string;
   loading: boolean;
+  history: History;
 }
 
 const LoginForm = ({
@@ -22,6 +24,7 @@ const LoginForm = ({
   username,
   password,
   loading,
+  history,
 }: IForm) => {
   return (
     <div>
@@ -69,7 +72,12 @@ const LoginForm = ({
           <div className="form_wrapper-secondary mTop ">
             <h3 className="heading-text">Don't have an account ?</h3>
 
-            <button className="myLogin-secondary">Register here</button>
+            <button
+              onClick={() => history.push('/register')}
+              className="myLogin-secondary"
+            >
+              Register here
+            </button>
 
             <div className="what-is">
               <Link className="myLinks" to="/">

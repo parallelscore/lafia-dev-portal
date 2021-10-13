@@ -8,10 +8,11 @@ const initialState = {
   username: '',
   password: '',
 };
+
 const userLabel = 'Username';
 const passwordLabel = 'Password';
 
-const LoginScreen = () => {
+const LoginScreen = ({ history }: any) => {
   const [values, setValues] = useState(initialState);
   const [loading, setLoading] = useState(false);
   const { username, password } = values;
@@ -21,7 +22,6 @@ const LoginScreen = () => {
   };
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log(e);
   };
 
   return (
@@ -35,6 +35,7 @@ const LoginScreen = () => {
           userLabel={userLabel}
           passwordLabel={passwordLabel}
           loading={loading}
+          history={history}
         />
       </Col>
     </AuthLayout>
