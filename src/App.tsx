@@ -19,19 +19,16 @@
 // export default App;
 
 import React from 'react';
-import { Translation } from 'react-i18next';
-
+import { BrowserRouter } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Routes from './Routes/Routes';
+import './sass/globalStyles.scss';
 export default function App() {
-  // const langChange = () => {
-  //   return i18n.changeLanguage('en-US')
-  // }
   return (
     <>
-      <Translation>
-        {(t, { i18n }) => <p>{t('my translated text')}</p>}
-      </Translation>
-
-      <button></button>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     </>
   );
 }
