@@ -1,13 +1,21 @@
+@use './../../sass/typography.scss';
+
 .form_wrapper {
-  padding: 2rem;
+  padding: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 
   &__content {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+  }
+  &-secondary {
+    align-self: center;
+    display: flex;
     flex-direction: column;
   }
 }
@@ -15,24 +23,44 @@
 .form-control {
   width: 30vw;
   padding: 0.75rem;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .margin-form-divider {
   margin: 3vh !important;
 }
 
-.myLogin {
+.myLogin-btn {
   width: 30vw;
   background: #6b48ff;
   color: #fff;
   padding: 0.75rem;
-  font-size: 18px;
-  font-weight: 700;
+
+  @extend .h3-login;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
 
   &:hover {
     color: #6b48ff;
     background: #fff;
     border: 2px solid #6b48ff;
+  }
+}
+
+.myLogin-secondary {
+  width: 15vw;
+  padding: 0.7rem 0.5rem;
+  background: #f0ecff;
+  // color: #6b48ff;
+  color: var(--color-primary);
+  border: none;
+  align-self: center;
+  @media screen and (max-width: 768px) {
+    width: 50%;
   }
 }
 
@@ -59,4 +87,25 @@
 
 .form-label {
   color: #0d3f67 !important;
+}
+
+.what-is {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myLinks {
+  @extend .login-links;
+}
+
+.mTop {
+  margin-top: 1rem;
+}
+
+.line-absolute {
+  position: absolute;
+  top: 73%;
+  width: 65%;
+  left: 18%;
+  border: 1px solid #f0ecff;
 }

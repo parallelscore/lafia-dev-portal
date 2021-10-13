@@ -8,8 +8,11 @@ const AuthLayout = ({ children }: IChildren) => {
   return (
     <Container fluid>
       <Row>
-        <Col lg={6} className="layout_wrapper"></Col>
-        <Col lg={6}> {children}</Col>
+        <Col lg={6} md={6} className="layout_wrapper"></Col>
+        <Col lg={6} md={6} sm={12}>
+          {' '}
+          {children}
+        </Col>
       </Row>
     </Container>
   );
