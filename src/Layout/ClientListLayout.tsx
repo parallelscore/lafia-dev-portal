@@ -8,6 +8,7 @@ import Message from './../images/icons/Message.svg';
 import Notification from './../images/icons/Notification.svg';
 import Header from '../components/header/Header';
 import { relative } from 'path';
+import { Link } from 'react-router-dom';
 interface IChildren {
   children: JSX.Element | JSX.Element[];
 }
@@ -22,12 +23,14 @@ const ClientListLayout = ({ children }: IChildren) => {
               <img src={Home} alt="dashboard" />
             </div>
 
-            <div className="clientList-icons">
-              <img src={dashboard} alt="dashboard" />
-            </div>
+            <Link to="/client-list">
+              <div className="clientList-icons">
+                <img src={dashboard} alt="people-clientlist" />
+              </div>
+            </Link>
 
             <div className="clientList-icons">
-              <img src={Message} alt="dashboard" />
+              <img src={Message} alt="message" />
             </div>
             <div className="clientList-icons">
               {' '}
@@ -39,7 +42,7 @@ const ClientListLayout = ({ children }: IChildren) => {
             </div>
           </div>
         </Col>
-        <Col lg={11} md={11} xs={11} sm={11} style={{ paddingTop: '6rem' }}>
+        <Col lg={11} md={11} xs={11} sm={11}>
           {children}
         </Col>
       </Row>

@@ -2,7 +2,7 @@ import React from 'react';
 import './headerStyle.scss';
 import logo from './../../images/lafia_logo 1.svg';
 import { Link } from 'react-router-dom';
-import { CaretDownOutlined } from '@ant-design/icons';
+import { CaretDownOutlined, GlobalOutlined } from '@ant-design/icons';
 import { Menu, Dropdown, Button } from 'antd';
 import { Avatar, Image } from 'antd';
 
@@ -46,9 +46,17 @@ const Header = () => {
             <img src={logo} alt="" />
           </Link>
         </div>
-        <div style={{ display: 'flex' }}>
-          <p>AVATAR</p>
-          <p>
+        <div className="d-flex">
+          <div className="header-display-wrapper">
+            <Dropdown overlay={menu} placement="bottomCenter" arrow>
+              <Button style={{ border: 'none' }}>
+                <GlobalOutlined className="myGlobe" />
+                <span className="header-text">EN</span>
+              </Button>
+            </Dropdown>
+          </div>
+
+          <div className="header-display-wrapper">
             <Avatar
               style={{ width: '3.5rem' }}
               src={
@@ -57,11 +65,11 @@ const Header = () => {
             />
             <Dropdown overlay={menu} placement="bottomCenter" arrow>
               <Button style={{ border: 'none' }}>
-                Enlongated Mask
+                <span className="header-text">Enlongated Mask</span>
                 <CaretDownOutlined />
               </Button>
             </Dropdown>
-          </p>
+          </div>
         </div>
       </div>
     </div>
