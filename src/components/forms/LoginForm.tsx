@@ -61,7 +61,11 @@ const LoginForm = ({
               />
             </Form.Group>
 
-            <Button className="myLogin-btn margin-form-divider" type="submit">
+            <Button
+              onClick={() => history.push('/list')}
+              className="myLogin-btn margin-form-divider"
+              type="submit"
+            >
               Log In
             </Button>
           </Form>
