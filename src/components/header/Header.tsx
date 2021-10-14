@@ -46,6 +46,8 @@ const Header = () => {
             <img src={logo} alt="" />
           </Link>
         </div>
+
+        {/**Display none to make it look nice on mobile */}
         <div className="d-flex">
           <div className="header-display-wrapper">
             <Dropdown overlay={menu} placement="bottomCenter" arrow>
