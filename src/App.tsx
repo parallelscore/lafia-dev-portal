@@ -6,6 +6,7 @@ import './sass/globalStyles.scss';
 import './sass/base.scss';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import 'antd/dist/antd.css';
 export default function App() {
   return (
     <>

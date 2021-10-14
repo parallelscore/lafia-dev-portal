@@ -1,0 +1,20 @@
+.header {
+  width: 92vw;
+  padding: 3.5vh;
+
+  left: 8.3%;
+  position: absolute;
+  top: 0;
+  background: #ffffff;
+  box-shadow: 0px 8px 40px rgba(13, 63, 103, 0.08);
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+      cursor: pointer;
+      z-index: 3;
+    }
+  }
+}
