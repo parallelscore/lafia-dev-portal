@@ -1,5 +1,5 @@
 .clientCreate {
-  padding: 20vh 3vw 3vw 2vw;
+  padding: 16vh 3vw 3vw 2vw;
 
   height: 95vh;
   overflow: scroll;
@@ -32,6 +32,15 @@
   border: none;
   margin-right: 3rem;
   background-image: url('./../../../images/icons/user.svg');
+
+  &:hover {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: all 1.2s ease-out;
+  }
 }
 
 .btn-area {
@@ -43,4 +52,87 @@
   line-height: 20px;
   letter-spacing: 0px;
   text-align: center;
+}
+
+.line {
+  border: 2px solid #f0f3f6;
+}
+
+.formArea {
+  &__inner {
+    &__first {
+      // margin: 4vh 0;
+      &__input {
+        // background: #ffffff;
+        // padding: 1.2vh 10vw;
+        // border: 1px solid #cbd5e1;
+        // box-sizing: border-box;
+        // border-radius: 5px;
+      }
+    }
+    &__second {
+      margin: 2rem;
+    }
+  }
+}
+
+.formGroupMargin {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+input[type='text'],
+textarea {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  padding: 1.4vh 10vw;
+  margin: 0vh 0 1vh 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  text-align: left;
+}
+
+input[type='text']:focus,
+textarea:focus {
+  box-shadow: 0 0 5px #6b48ff;
+  padding: 1.4vh 10vw;
+  margin: 0vh 0 1vh 0;
+  border: 1px solid #6b48ff;
+  border-radius: 5px;
+  text-align: left;
+}
+
+input[type='email'],
+textarea {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  padding: 1.4vh 10vw;
+  margin: 0vh 0 1vh 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  text-align: left;
+}
+
+input[type='email']:focus,
+textarea:focus {
+  box-shadow: 0 0 5px #6b48ff;
+  padding: 1.4vh 10vw;
+  margin: 0vh 0 1vh 0;
+  border: 1px solid #6b48ff;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.text-area-input {
+  max-width: 31.5vw;
+  color: #255276;
+  font-size: 15px;
+  font-weight: 400;
+  overflow-wrap: break-word;
 }
