@@ -3,7 +3,9 @@ import { Spinner } from 'react-bootstrap';
 import React from 'react';
 
 const LoginScreen = React.lazy(() => import('../screens/auth/LoginScreen'));
-const RegisterScreen = React.lazy(() => import('../screens/auth/LoginScreen'));
+const RegisterScreen = React.lazy(
+  () => import('../screens/auth/RegisterScreen')
+);
 const MyTable = React.lazy(() => import('../screens/auth/MyTable'));
 const CreateClient = React.lazy(() => import('../screens/client/CreateClient'));
 const ClientList = React.lazy(() => import('../screens/client/ClientList'));
