@@ -10,31 +10,11 @@ const Header = () => {
   const menu = (
     <Menu>
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.antgroup.com"
-        >
-          1st menu item
-        </a>
+        <Link to="/login">Login</Link>
       </Menu.Item>
+
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.aliyun.com"
-        >
-          2nd menu item
-        </a>
-      </Menu.Item>
-      <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.luohanacademy.com"
-        >
-          3rd menu item
-        </a>
+        <Link to="/register">Register</Link>
       </Menu.Item>
     </Menu>
   );

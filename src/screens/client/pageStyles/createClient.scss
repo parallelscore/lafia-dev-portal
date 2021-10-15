@@ -28,19 +28,20 @@
   text-indent: -9999px;
   width: 140px;
   height: 100px;
+  background-repeat: no-repeat;
   background-size: 140px 100px;
   border: none;
   margin-right: 3rem;
   background-image: url('./../../../images/icons/user.svg');
 
-  &:hover {
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    transition: all 1.2s ease-out;
-  }
+  // &:hover {
+  //   -moz-transform: scale(1.2);
+  //   -webkit-transform: scale(1.2);
+  //   -o-transform: scale(1.2);
+  //   -ms-transform: scale(1.2);
+  //   transform: scale(1.2);
+  //   transition: all 1.2s ease-out;
+  // }
 }
 
 .btn-area {
@@ -135,4 +136,24 @@ textarea:focus {
   font-size: 15px;
   font-weight: 400;
   overflow-wrap: break-word;
+}
+
+.selectWidth {
+  width: 31vw !important;
+  border-radius: 5px;
+}
+
+.ant-select-selection-overflow {
+  padding: 0.5rem;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background: #6b48ff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
 }

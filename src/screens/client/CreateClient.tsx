@@ -4,6 +4,8 @@ import './pageStyles/createClient.scss';
 import ReusableButton from '../../components/button/ReusableButton';
 import { History } from 'history';
 import { Form, Col, Row } from 'react-bootstrap';
+
+import { Select } from 'antd';
 interface IHistory {
   history: History;
 }
@@ -13,9 +15,18 @@ const CreateClient = ({ history }: IHistory) => {
     return <h2>Full Name</h2>;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
     console.log('Clicked');
   };
+
+  const { Option } = Select;
+
+  function handleChange(value: any) {
+    console.log(`selected ${value}`);
+  }
+
+  const data = [{ name: 'email:read' }, { name: 'profile:read' }];
 
   return (
     <ClientListLayout>
@@ -24,7 +35,11 @@ const CreateClient = ({ history }: IHistory) => {
         <div className="clientCreate__top">
           <Col lg={9} className="d-flex top-items">
             <div>
-              <Form.Group controlId="formFile" className="mb-3">
+              <Form.Group
+                style={{ width: '13vw' }}
+                controlId="formFile"
+                className="mb-3"
+              >
                 <Form.Control className="person" type="file" />
               </Form.Group>
             </div>
@@ -97,11 +112,23 @@ const CreateClient = ({ history }: IHistory) => {
               />{' '}
             </div>{' '}
             <div className="formGroupMargin">
-              <p>Email (optional)</p>
-              <input
-                className="formArea__inner__first__input"
-                type="email"
-              />{' '}
+              <p>Scopes &#x2A;</p>
+
+              <Select
+                className="selectWidth"
+                mode="multiple"
+                allowClear
+                style={{ width: '100%' }}
+                placeholder="Please select"
+                // defaultValue={['a10', 'c12']}
+                onChange={handleChange}
+              >
+                {data.map((d) => (
+                  <Option value={d.name} key={d.name}>
+                    {d.name}
+                  </Option>
+                ))}
+              </Select>
             </div>
           </Col>
         </Row>
