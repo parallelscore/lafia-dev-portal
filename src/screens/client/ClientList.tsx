@@ -3,7 +3,13 @@ import ClientListLayout from '../../Layout/ClientListLayout';
 import './pageStyles/clientListPage.scss';
 import './../../components/button/reusableButton.scss';
 import ReusableButton from '../../components/button/ReusableButton';
-const ClientList = () => {
+import { History } from 'history';
+
+interface IHistory {
+  history: History;
+}
+
+const ClientList = ({ history }: IHistory) => {
   const clientListText = () => {
     return <h2>Client List</h2>;
   };
@@ -13,7 +19,10 @@ const ClientList = () => {
       <div className="client">
         <div className="client__top">
           {clientListText()}
-          <ReusableButton text="New Client" />
+          <ReusableButton
+            onClick={() => history.push('/create-client')}
+            text="New Client"
+          />
         </div>
         <div>REUSABLE TABLE AREA</div>
       </div>

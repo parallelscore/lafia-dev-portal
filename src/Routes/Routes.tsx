@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Route } from 'react-router-dom';
-import ClientList from '../screens/auth/ClientList';
+import ClientList from '../screens/client/ClientList';
 import LoginScreen from '../screens/auth/LoginScreen';
 import MyTable from '../screens/auth/MyTable';
 import RegisterScreen from '../screens/auth/RegisterScreen';
