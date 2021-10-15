@@ -1,95 +1,21 @@
 import React from 'react';
 import ClientListLayout from '../../Layout/ClientListLayout';
 import './pageStyles/clientListPage.scss';
+import './../../components/button/reusableButton.scss';
+import ReusableButton from '../../components/button/ReusableButton';
 const ClientList = () => {
+  const clientListText = () => {
+    return <h2>Client List</h2>;
+  };
+
   return (
     <ClientListLayout>
       <div className="client">
         <div className="client__top">
-          <h2>CLIENT LIST</h2>
-          <button>ndndnd</button>
+          {clientListText()}
+          <ReusableButton text="New Client" />
         </div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur
-        iure itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum
-        est voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Quos tenetur iure
-        itaque, beatae sequi perferendis suscipit odit nemo cum sunt. Rerum est
-        voluptatibus nostrum reiciendis et minima impedit ipsa optio.
+        <div>REUSABLE TABLE AREA</div>
       </div>
     </ClientListLayout>
   );

@@ -1,7 +1,12 @@
 import React from 'react';
+import './reusableButton.scss';
 
-const ReusableButton = () => {
-  return <div>Hi</div>;
+interface IButton {
+  text: string;
+}
+
+const ReusableButton = ({ text }: IButton) => {
+  return <button className="reusableButton">{text}</button>;
 };
 
 export default ReusableButton;

@@ -1,0 +1,15 @@
+.reusableButton {
+  background: #6b48ff;
+  padding: 0.1vw 5vw;
+  border: none;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover {
+    background: #fff;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+}
