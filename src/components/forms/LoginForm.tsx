@@ -28,9 +28,9 @@ const LoginForm = ({
 }: IForm) => {
   return (
     <div>
-      <Col className="form_wrapper">
+      <Col className="form_wrapper myHeight">
         <div className="form_wrapper__content">
-          <img className="logo_img" src={logo} alt="my logo" />
+          <img className="logo_imgL" src={logo} alt="my logo" />
           <h3 className="heading-text">Dev Portal</h3>
           <Form onSubmit={handleSubmit}>
             <Form.Group
@@ -61,7 +61,11 @@ const LoginForm = ({
               />
             </Form.Group>
 
-            <Button className="myLogin-btn margin-form-divider" type="submit">
+            <Button
+              onClick={() => history.push('/list')}
+              className="myLogin-btn margin-form-divider"
+              type="submit"
+            >
               Log In
             </Button>
           </Form>
@@ -70,7 +74,7 @@ const LoginForm = ({
           <div className="line-absolute"> </div>
 
           <div className="form_wrapper-secondary mTop ">
-            <h3 className="heading-text">Don't have an account ?</h3>
+            <h3 className="heading-textLogin">Don't have an account ?</h3>
 
             <button
               onClick={() => history.push('/register')}

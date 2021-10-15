@@ -68,13 +68,13 @@
   }
 }
 
-.logo_img {
+.logo_imgL {
   justify-self: center;
   align-self: center;
   margin: 2.8vh 0;
 }
 
-.heading-text {
+.heading-textLogin {
   justify-self: center;
   align-self: center;
   margin: 2.8vh 0;
@@ -112,4 +112,8 @@
   width: 65%;
   left: 18%;
   border: 1px solid #f0ecff;
+}
+
+.myHeight {
+  height: 100vh;
 }
