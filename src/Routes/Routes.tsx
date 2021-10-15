@@ -1,19 +1,28 @@
+import { Route } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
 import React from 'react';
 
-import { Route } from 'react-router-dom';
-import ClientList from '../screens/client/ClientList';
-import LoginScreen from '../screens/auth/LoginScreen';
-import MyTable from '../screens/auth/MyTable';
-import RegisterScreen from '../screens/auth/RegisterScreen';
+const LoginScreen = React.lazy(() => import('../screens/auth/LoginScreen'));
+const RegisterScreen = React.lazy(() => import('../screens/auth/LoginScreen'));
+const MyTable = React.lazy(() => import('../screens/auth/MyTable'));
+const CreateClient = React.lazy(() => import('../screens/client/CreateClient'));
+const ClientList = React.lazy(() => import('../screens/client/ClientList'));
 
 const Routes = () => {
   return (
-    <div>
+    <React.Suspense
+      fallback={
+        <p>
+          <Spinner animation="border" />
+        </p>
+      }
+    >
       <Route exact path="/login" component={LoginScreen} />
       <Route exact path="/register" component={RegisterScreen} />
       <Route exact path={['/', '/home']} component={MyTable} />
-      <Route exact path={['/client-list', '/list']} component={ClientList} />
-    </div>
+      <Route exact path="/client-list" component={ClientList} />
+      <Route exact path="/create-client" component={CreateClient} />
+    </React.Suspense>
   );
 };
 

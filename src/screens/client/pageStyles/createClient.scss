@@ -1,0 +1,46 @@
+.clientCreate {
+  padding: 20vh 3vw 3vw 2vw;
+
+  height: 95vh;
+  overflow: scroll;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.top-items {
+  align-items: center;
+  // justify-content: center;
+}
+
+.btn-left {
+  margin-left: auto;
+}
+
+.btn-left-wrapper {
+  margin-top: -7.5vh;
+}
+
+.person {
+  display: block;
+  text-indent: -9999px;
+  width: 140px;
+  height: 100px;
+  background-size: 140px 100px;
+  border: none;
+  margin-right: 3rem;
+  background-image: url('./../../../images/icons/user.svg');
+}
+
+.btn-area {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+}
