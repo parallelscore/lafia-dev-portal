@@ -19,7 +19,7 @@ const Routes = () => {
         </p>
       }
     >
-      <Route exact path="/login" component={LoginScreen} />
+      <Route exact path={['/login', '/']} component={LoginScreen} />
       <Route exact path="/register" component={RegisterScreen} />
       <Route exact path={['/', '/home']} component={MyTable} />
       <Route exact path="/client-list" component={ClientList} />

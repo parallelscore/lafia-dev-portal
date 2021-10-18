@@ -4,6 +4,7 @@ import './pageStyles/clientListPage.scss';
 import './../../components/button/reusableButton.scss';
 import ReusableButton from '../../components/button/ReusableButton';
 import { History } from 'history';
+import CustomTable from '../../components/table/CustomTable';
 
 interface IHistory {
   history: History;
@@ -24,7 +25,10 @@ const ClientList = ({ history }: IHistory) => {
             text="New Client"
           />
         </div>
-        <div>REUSABLE TABLE AREA</div>
+        <div>
+          REUSABLE TABLE AREA
+          <CustomTable />
+        </div>
       </div>
     </ClientListLayout>
   );

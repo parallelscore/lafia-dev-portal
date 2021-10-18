@@ -12,7 +12,7 @@ const initialState = {
 
 const userLabel = 'Username';
 const emailLabel = 'Email';
-const phoneNumberLabel = 'Username';
+const phoneNumberLabel = 'Phone Number';
 const passwordLabel = 'Password';
 const confirmPasswordLabel = 'Confirm Password';
 
