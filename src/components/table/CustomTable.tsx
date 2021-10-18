@@ -1,53 +1,95 @@
 import React, { useState } from 'react';
 import { Table, Radio, Divider } from 'antd';
+import { Avatar, Image } from 'antd';
+import { Popover, Button } from 'antd';
+import { Link } from 'react-router-dom';
 
+const content = (
+  <div>
+    <div>
+      <Link to="#">View Details</Link>
+    </div>
+    <div>
+      <Link to="#">Delete</Link>
+    </div>
+  </div>
+);
 const columns = [
   {
-    title: 'Name',
+    title: ' ',
+    dataIndex: 'image',
+    render: () => (
+      <div style={{ width: '5px' }}>
+        <img
+          alt="myImage"
+          style={{ width: '30px' }}
+          // replace here with dynamically mapped image
+          src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+        />
+      </div>
+    ),
+  },
+
+  {
+    title: 'Client Name',
     dataIndex: 'name',
-    render: (text: string) => <a>{text}</a>,
+    render: (text: string) => <a>{text} </a>,
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
+    title: 'Client URL',
+    dataIndex: 'clientUrl',
   },
   {
-    title: 'Address',
+    title: 'Email',
+    dataIndex: 'email',
+  },
+
+  {
+    title: 'Key Status',
+    dataIndex: 'name',
+    render: (text: string) => <button> Disabled</button>,
+  },
+
+  {
+    title: ' ',
     dataIndex: 'address',
+    render: (text: string) => (
+      <Popover placement="bottom" content={content} title="">
+        <Button type="primary">H</Button>
+      </Popover>
+    ),
   },
 ];
 
 interface DataType {
   key: React.Key;
   name: string;
-  age: number;
+  clientUrl: string;
   address: string;
+  email: string;
 }
 
 const data: DataType[] = [
   {
     key: '1',
-    name: 'John Brown',
-    age: 32,
+    name: 'Kimberly Jones',
+    clientUrl: 'http://urlsample.com',
     address: 'New York No. 1 Lake Park',
+    email: 'email@email.com',
   },
   {
     key: '2',
-    name: 'Jim Green',
-    age: 42,
+    name: 'Kimberly Jones',
+    clientUrl: 'http://urlsample.com',
     address: 'London No. 1 Lake Park',
+    email: 'email@email.com',
   },
   {
     key: '3',
-    name: 'Joe Black',
-    age: 32,
+    name: 'Kimberly Jones',
+    clientUrl: 'http://urlsample.com',
     address: 'Sidney No. 1 Lake Park',
-  },
-  {
-    key: '4',
-    name: 'Disabled User',
-    age: 99,
-    address: 'Sidney No. 1 Lake Park',
+    email: 'email@email.com',
   },
 ];
 
