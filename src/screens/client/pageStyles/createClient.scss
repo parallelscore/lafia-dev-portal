@@ -1,0 +1,159 @@
+.clientCreate {
+  padding: 16vh 3vw 3vw 2vw;
+
+  height: 95vh;
+  overflow: scroll;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.top-items {
+  align-items: center;
+  // justify-content: center;
+}
+
+.btn-left {
+  margin-left: auto;
+}
+
+.btn-left-wrapper {
+  margin-top: -7.5vh;
+}
+
+.person {
+  display: block;
+  text-indent: -9999px;
+  width: 140px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 140px 100px;
+  border: none;
+  margin-right: 3rem;
+  background-image: url('./../../../images/icons/user.svg');
+
+  // &:hover {
+  //   -moz-transform: scale(1.2);
+  //   -webkit-transform: scale(1.2);
+  //   -o-transform: scale(1.2);
+  //   -ms-transform: scale(1.2);
+  //   transform: scale(1.2);
+  //   transition: all 1.2s ease-out;
+  // }
+}
+
+.btn-area {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.line {
+  border: 2px solid #f0f3f6;
+}
+
+.formArea {
+  &__inner {
+    &__first {
+      // margin: 4vh 0;
+      &__input {
+        // background: #ffffff;
+        // padding: 1.2vh 10vw;
+        // border: 1px solid #cbd5e1;
+        // box-sizing: border-box;
+        // border-radius: 5px;
+      }
+    }
+    &__second {
+      margin: 2rem;
+    }
+  }
+}
+
+.formGroupMargin {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+input[type='text'],
+textarea {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  padding: 1.4vh 10vw;
+  margin: 0vh 0 1vh 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  text-align: left;
+}
+
+input[type='text']:focus,
+textarea:focus {
+  box-shadow: 0 0 5px #6b48ff;
+  padding: 1.4vh 10vw;
+  margin: 0vh 0 1vh 0;
+  border: 1px solid #6b48ff;
+  border-radius: 5px;
+  text-align: left;
+}
+
+input[type='email'],
+textarea {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  padding: 1.4vh 10vw;
+  margin: 0vh 0 1vh 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  text-align: left;
+}
+
+input[type='email']:focus,
+textarea:focus {
+  box-shadow: 0 0 5px #6b48ff;
+  padding: 1.4vh 10vw;
+  margin: 0vh 0 1vh 0;
+  border: 1px solid #6b48ff;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.text-area-input {
+  max-width: 31.5vw;
+  color: #255276;
+  font-size: 15px;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.selectWidth {
+  width: 31vw !important;
+  border-radius: 5px;
+}
+
+.ant-select-selection-overflow {
+  padding: 0.5rem;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background: #6b48ff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+}
