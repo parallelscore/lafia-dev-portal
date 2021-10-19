@@ -1,3 +1,4 @@
+@import "../sass/colors.scss";
 .clientList {
   background: #1f1d2b;
   display: flex;
@@ -39,7 +40,7 @@
   }
 
   &:hover {
-    background: #6b48ff;
+    background: $purple;
     border-radius: 14px;
     border: 10px solid #363636;
     padding: 1.2rem;

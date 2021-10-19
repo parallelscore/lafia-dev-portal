@@ -1,0 +1,92 @@
+@import "../../sass/typography.scss";
+@import "../../sass/mediaQueries.scss";
+@import "../../sass/colors.scss";
+
+.consent_container {
+    .header {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        padding: 0 2rem;
+        margin-top: 1rem;
+        h1 {
+            @include sfProTheme();
+            color: $deepBlue;
+        }
+        h2 {
+            @include sfProTheme();
+            color: $purple;
+        }
+    }
+    hr {
+        margin: 0;
+    }
+    .consent_body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .authorization {
+            @include sfProTheme($fontWeight: 600, $fontSize: 36px, $lineHeight: 48px);
+            color: $deepBlue;
+            margin: 2rem 0;
+            @include tablet {
+                font-size: 28px;
+            }
+        }
+        .access_to {
+            @include sfProTheme($fontWeight: 600, $fontSize: 24px, $lineHeight: 28px);
+            color: $deepBlue;
+            margin-bottom: 1rem;
+        }
+        .access_options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 5rem;
+            .profile_access {
+                @include sfProTheme($fontSize: 18px, $lineHeight: 24px);
+                border: 2px solid $lightGray;
+                border-radius: 5px;
+                padding: 5px 15px;
+                color: $lightBlue;
+            }
+            .email_access {
+                @include sfProTheme($fontSize: 18px, $lineHeight: 24px);
+                border: 2px solid $lightGray;
+                border-radius: 5px;
+                padding: 5px 15px;
+                color: $lightBlue;
+            }
+        }
+        .proceed_to_lafia {
+            @include sfProTheme($fontWeight: 600, $fontSize: 18px, $lineHeight: 24px);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 30px;
+            background: $purple;
+            color: $white;
+            width: 30vw;
+            margin-bottom: 2rem;
+            @include tablet {
+                width: 60vw;
+            }
+        }
+        .cancel {
+            @include sfProTheme($fontWeight: 600, $fontSize: 18px, $lineHeight: 24px);
+            border: none;
+            border-bottom: 1px solid $lightGray;
+            color: $deepBlue;
+            margin-bottom: 4rem;
+        }
+        .token_information_container {
+            display: grid;
+            place-content: center;
+            width: 50vw;
+            .token_information {
+                @include sfProTheme();
+                color: $lightBlue;
+            }
+        }
+    }
+}
